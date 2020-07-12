@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:plantlife/views/widgets/post_card.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
 
@@ -9,8 +9,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Leaf"),
       ),
-      body: Center(
-        child: Text("Hello world!"),
+      body: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (BuildContext context, int index) {
+          return PostCard();
+        },
       ),
     );
   }
